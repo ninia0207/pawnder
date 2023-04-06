@@ -13,6 +13,7 @@
 		162EA7EC29DCB86A003CB326 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162EA7EB29DCB86A003CB326 /* DatabaseManager.swift */; };
 		162EA7EE29DCB8F8003CB326 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162EA7ED29DCB8F8003CB326 /* AuthManager.swift */; };
 		162EA7F029DCB93D003CB326 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162EA7EF29DCB93D003CB326 /* StorageManager.swift */; };
+		162EA7F529DF5D18003CB326 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162EA7F429DF5D18003CB326 /* Extensions.swift */; };
 		1682D12E29DBE4FE005E3C60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1682D12D29DBE4FE005E3C60 /* AppDelegate.swift */; };
 		1682D13029DBE4FE005E3C60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1682D12F29DBE4FE005E3C60 /* SceneDelegate.swift */; };
 		1682D13229DBE4FE005E3C60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1682D13129DBE4FE005E3C60 /* HomeViewController.swift */; };
@@ -158,6 +159,27 @@
 			proxyType = 2;
 			remoteGlobalIDString = 379E5319BC6B4AE5613DFF7EEEAA6905;
 			remoteInfo = PromisesSwift;
+		};
+		162EA80D29DF5D18003CB326 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 162EA25629DCB357003CB326 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 81418C93A311F0492F62A8F88C3BD66B;
+			remoteInfo = FirebaseAppCheckInterop;
+		};
+		162EA80F29DF5D18003CB326 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 162EA25629DCB357003CB326 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 09D8B108F8926BC5DC78684FF235123E;
+			remoteInfo = FirebaseAuthInterop;
+		};
+		162EA81129DF5D18003CB326 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 162EA25629DCB357003CB326 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9CF8FA5F01F446F01AAC7331075452AD;
+			remoteInfo = FirebaseStorage;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1521,6 +1543,7 @@
 		162EA7EB29DCB86A003CB326 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		162EA7ED29DCB8F8003CB326 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		162EA7EF29DCB93D003CB326 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		162EA7F429DF5D18003CB326 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		1682D12A29DBE4FE005E3C60 /* pawnder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pawnder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1682D12D29DBE4FE005E3C60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1682D12F29DBE4FE005E3C60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -2110,7 +2133,9 @@
 			children = (
 				162EA7A329DCB358003CB326 /* Appirater */,
 				162EA7A529DCB358003CB326 /* Appirater-Appirater */,
+				162EA80E29DF5D18003CB326 /* FirebaseAppCheckInterop */,
 				162EA7A729DCB358003CB326 /* FirebaseAuth */,
+				162EA81029DF5D18003CB326 /* FirebaseAuthInterop */,
 				162EA7A929DCB358003CB326 /* FirebaseCore */,
 				162EA7AB29DCB358003CB326 /* FirebaseCoreExtension */,
 				162EA7AD29DCB358003CB326 /* FirebaseCoreInternal */,
@@ -2118,6 +2143,7 @@
 				162EA7B129DCB358003CB326 /* FirebaseDatabase */,
 				162EA7B329DCB358003CB326 /* FirebaseInstallations */,
 				162EA7B529DCB358003CB326 /* FirebaseSessions */,
+				162EA81229DF5D18003CB326 /* FirebaseStorage */,
 				162EA7B729DCB358003CB326 /* GoogleDataTransport */,
 				162EA7B929DCB358003CB326 /* GoogleUtilities */,
 				162EA7BB29DCB358003CB326 /* GTMSessionFetcher */,
@@ -4816,6 +4842,7 @@
 				162EA7EB29DCB86A003CB326 /* DatabaseManager.swift */,
 				162EA7ED29DCB8F8003CB326 /* AuthManager.swift */,
 				162EA7EF29DCB93D003CB326 /* StorageManager.swift */,
+				162EA7F429DF5D18003CB326 /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -5122,6 +5149,30 @@
 			remoteRef = 162EA7C429DCB358003CB326 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		162EA80E29DF5D18003CB326 /* FirebaseAppCheckInterop */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = FirebaseAppCheckInterop;
+			path = FirebaseAppCheckInterop.framework;
+			remoteRef = 162EA80D29DF5D18003CB326 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		162EA81029DF5D18003CB326 /* FirebaseAuthInterop */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = FirebaseAuthInterop;
+			path = FirebaseAuthInterop.framework;
+			remoteRef = 162EA80F29DF5D18003CB326 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		162EA81229DF5D18003CB326 /* FirebaseStorage */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = FirebaseStorage;
+			path = FirebaseStorage.framework;
+			remoteRef = 162EA81129DF5D18003CB326 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -5186,6 +5237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				162EA7F029DCB93D003CB326 /* StorageManager.swift in Sources */,
+				162EA7F529DF5D18003CB326 /* Extensions.swift in Sources */,
 				1682D15029DBE989005E3C60 /* LoginViewController.swift in Sources */,
 				1682D15A29DBEA09005E3C60 /* SearchViewController.swift in Sources */,
 				162EA7EC29DCB86A003CB326 /* DatabaseManager.swift in Sources */,
@@ -5387,8 +5439,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5416,8 +5468,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
