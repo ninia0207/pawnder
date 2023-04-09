@@ -70,14 +70,14 @@ class LoginViewController: UIViewController {
         let button = UIButton()
         button.setTitle("Terms of Service", for: .normal)
         button.setTitleColor(.secondaryLabel, for: .normal)
-        return UIButton()
+        return button
     }()
     
     private let privacyButton : UIButton = {
         let button = UIButton()
         button.setTitle("Privacy", for: .normal)
         button.setTitleColor(.secondaryLabel, for: .normal)
-        return UIButton()
+        return button
     }()
     
     
@@ -85,9 +85,18 @@ class LoginViewController: UIViewController {
     private let headerView : UIView = {
         let header = UIView()
         header.layer.masksToBounds = true
-        let backgroundView = UIImageView(image: UIImage(named: "Gradient"))
+        let backgroundView = UIImageView(image: UIImage(named: "top_gradient"))
         header.addSubview(backgroundView)
         return header
+    }()
+    
+    //footer
+    private let footerView : UIView = {
+        let footer = UIView()
+        footer.layer.masksToBounds = true
+        let backgroundView = UIImageView(image: UIImage(named: "bottom_gradient"))
+        footer.addSubview(backgroundView)
+        return footer
     }()
     
     override func viewDidLoad() {
@@ -123,6 +132,13 @@ class LoginViewController: UIViewController {
             width: view.width,
             height: view.height/3.0
         )
+        
+//        footerView.frame = CGRect(
+//            x: 0,
+//            y: view.height-view.safeAreaInsets.bottom-50,
+//            width: view.width,
+//            height: view.height/3.0
+//        )
         
         usernameEmailField.frame = CGRect(
             x: 25,
@@ -166,6 +182,7 @@ class LoginViewController: UIViewController {
             height: 50
         )
         configureHeaderView()
+        //configureFooterView()
     }
     
     private func configureHeaderView(){
@@ -182,9 +199,31 @@ class LoginViewController: UIViewController {
         let imageView = UIImageView(image: UIImage(named: "PawnderLogo"))
         headerView.addSubview(imageView)
         imageView.contentMode = .scaleAspectFit
-        imageView.frame = CGRect(x: headerView.width/4.0, y: view.safeAreaInsets.top, width: headerView.width/2.0, height: headerView.height - view.safeAreaInsets.top)
+        imageView.frame = CGRect(
+            x: headerView.width/4.0,
+            y: view.safeAreaInsets.top,
+            width: headerView.width/2.0,
+            height: headerView.height - view.safeAreaInsets.top
+        )
         
     }
+    
+    private func configureFooterView(){
+        guard footerView.subviews.count == 1 else{
+            return
+        }
+        
+        guard let backgroundView = footerView.subviews.first else{
+            return
+        }
+        backgroundView.frame = footerView.bounds
+        
+        //add buttons
+        footerView.addSubview(termsButton)
+        footerView.addSubview(privacyButton)
+        
+    }
+    
     
     private func addSubviews(){
         view.addSubview(usernameEmailField)
@@ -194,6 +233,7 @@ class LoginViewController: UIViewController {
         view.addSubview(termsButton)
         view.addSubview(privacyButton)
         view.addSubview(createAccountButton)
+        view.addSubview(footerView)
     }
     
     @objc private func didTapLoginButton(){
@@ -206,8 +246,38 @@ class LoginViewController: UIViewController {
         }
         
         //login functionality
+        var username: String?
+        var email: String?
         
+        if usernameEmail.contains("@"), usernameEmail.contains("."){
+            //email
+            email = usernameEmail
+        }else{
+            //username
+            username = usernameEmail
+        }
+        
+        AuthManager.shared.loginUser(username: username, email: email, password: password){success in
+            DispatchQueue.main.async{
+                if success{
+                    //user logged in
+                    self.dismiss(animated: true, completion: nil)
+                }else{
+                    //error occured
+                    let alert = UIAlertController(title: "Log In Error",
+                                                  message: "We were unable to log you in",
+                                                  preferredStyle: .alert
+                    )
+                    alert.addAction(UIAlertAction(title: "Dismiss",
+                                                  style: .cancel,
+                                                  handler: nil))
+                    self.present(alert, animated: true)
+                }
+            }
+            
+        }
     }
+    
     @objc private func didTapTermButton(){
         
     }
@@ -216,7 +286,8 @@ class LoginViewController: UIViewController {
     }
     @objc private func didTapCreateAccountButton(){
         let vc = RegistrationViewController()
-        present(vc, animated: true)
+        vc.title = "Create Account"
+        present(UINavigationController(rootViewController: vc), animated: true)
     }
 }
 
