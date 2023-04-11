@@ -43,6 +43,7 @@ final class ProfileViewController: UIViewController {
                                                             style: .done,
                                                             target: self,
                                                             action: #selector(didTapSettingsButton))
+        navigationItem.rightBarButtonItem?.tintColor = UIColor(red: 0.58, green: 0.74, blue: 0.58, alpha: 1.00)
     }
     
     @objc private func didTapSettingsButton(){

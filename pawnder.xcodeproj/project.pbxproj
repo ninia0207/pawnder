@@ -14,6 +14,9 @@
 		162EA7EE29DCB8F8003CB326 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162EA7ED29DCB8F8003CB326 /* AuthManager.swift */; };
 		162EA7F029DCB93D003CB326 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162EA7EF29DCB93D003CB326 /* StorageManager.swift */; };
 		162EA7F529DF5D18003CB326 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162EA7F429DF5D18003CB326 /* Extensions.swift */; };
+		162EA83229E43CA8003CB326 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162EA81A29E43CA8003CB326 /* CardView.swift */; };
+		162EA83429E43DC0003CB326 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162EA83329E43DC0003CB326 /* ContentView.swift */; };
+		162EA85529E5B559003CB326 /* homepage_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = 162EA85429E5B559003CB326 /* homepage_animation.json */; };
 		1682D12E29DBE4FE005E3C60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1682D12D29DBE4FE005E3C60 /* AppDelegate.swift */; };
 		1682D13029DBE4FE005E3C60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1682D12F29DBE4FE005E3C60 /* SceneDelegate.swift */; };
 		1682D13229DBE4FE005E3C60 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1682D13129DBE4FE005E3C60 /* HomeViewController.swift */; };
@@ -180,6 +183,13 @@
 			proxyType = 2;
 			remoteGlobalIDString = 9CF8FA5F01F446F01AAC7331075452AD;
 			remoteInfo = FirebaseStorage;
+		};
+		162EA85229E5B536003CB326 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 162EA25629DCB357003CB326 /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 51BA97E8B5085EFFB47BC9C0B785CEA7;
+			remoteInfo = "lottie-ios";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -1544,6 +1554,10 @@
 		162EA7ED29DCB8F8003CB326 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		162EA7EF29DCB93D003CB326 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		162EA7F429DF5D18003CB326 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		162EA81A29E43CA8003CB326 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		162EA83329E43DC0003CB326 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		162EA83629E455B6003CB326 /* Blinker-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-SemiBold.ttf"; sourceTree = "<group>"; };
+		162EA85429E5B559003CB326 /* homepage_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = homepage_animation.json; sourceTree = "<group>"; };
 		1682D12A29DBE4FE005E3C60 /* pawnder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pawnder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1682D12D29DBE4FE005E3C60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1682D12F29DBE4FE005E3C60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -2148,6 +2162,7 @@
 				162EA7B929DCB358003CB326 /* GoogleUtilities */,
 				162EA7BB29DCB358003CB326 /* GTMSessionFetcher */,
 				162EA7BD29DCB358003CB326 /* leveldb-library */,
+				162EA85329E5B536003CB326 /* lottie-ios */,
 				162EA7BF29DCB358003CB326 /* nanopb */,
 				162EA7C129DCB358003CB326 /* Pods-pawnder */,
 				162EA7C329DCB358003CB326 /* PromisesObjC */,
@@ -4785,6 +4800,22 @@
 			path = General;
 			sourceTree = "<group>";
 		};
+		162EA83529E455A6003CB326 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				162EA83629E455B6003CB326 /* Blinker-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		162EA83929E5B536003CB326 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				162EA85429E5B559003CB326 /* homepage_animation.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		1682D12129DBE4FE005E3C60 = {
 			isa = PBXGroup;
 			children = (
@@ -4806,6 +4837,7 @@
 		1682D12C29DBE4FE005E3C60 /* pawnder */ = {
 			isa = PBXGroup;
 			children = (
+				162EA83529E455A6003CB326 /* Fonts */,
 				1682D14329DBE51E005E3C60 /* Resources */,
 				1682D14A29DBE74D005E3C60 /* Models */,
 				1682D14229DBE518005E3C60 /* Views */,
@@ -4827,6 +4859,8 @@
 		1682D14229DBE518005E3C60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				162EA83329E43DC0003CB326 /* ContentView.swift */,
+				162EA81A29E43CA8003CB326 /* CardView.swift */,
 				1682D14B29DBE794005E3C60 /* Storyboard */,
 				1682D13629DBE500005E3C60 /* Assets.xcassets */,
 			);
@@ -4836,6 +4870,7 @@
 		1682D14329DBE51E005E3C60 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				162EA83929E5B536003CB326 /* Lottie */,
 				162EA16129DCA3CD003CB326 /* GoogleService-Info.plist */,
 				1682D12D29DBE4FE005E3C60 /* AppDelegate.swift */,
 				1682D12F29DBE4FE005E3C60 /* SceneDelegate.swift */,
@@ -5173,6 +5208,14 @@
 			remoteRef = 162EA81129DF5D18003CB326 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		162EA85329E5B536003CB326 /* lottie-ios */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = "lottie-ios";
+			path = Lottie.framework;
+			remoteRef = 162EA85229E5B536003CB326 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -5183,6 +5226,7 @@
 				1682D16229DBEBE8005E3C60 /* Main.storyboard in Resources */,
 				162EA16229DCA3CE003CB326 /* GoogleService-Info.plist in Resources */,
 				1682D13A29DBE500005E3C60 /* LaunchScreen.storyboard in Resources */,
+				162EA85529E5B559003CB326 /* homepage_animation.json in Resources */,
 				1682D13729DBE500005E3C60 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -5242,7 +5286,9 @@
 				1682D15A29DBEA09005E3C60 /* SearchViewController.swift in Sources */,
 				162EA7EC29DCB86A003CB326 /* DatabaseManager.swift in Sources */,
 				1682D16029DBEB99005E3C60 /* PostViewController.swift in Sources */,
+				162EA83429E43DC0003CB326 /* ContentView.swift in Sources */,
 				1682D15C29DBEA1A005E3C60 /* ListViewController.swift in Sources */,
+				162EA83229E43CA8003CB326 /* CardView.swift in Sources */,
 				1682D15429DBE9C5005E3C60 /* DirectMessageViewController.swift in Sources */,
 				1682D14929DBE570005E3C60 /* ProfileViewController.swift in Sources */,
 				1682D15829DBE9E9005E3C60 /* SettingsViewController.swift in Sources */,

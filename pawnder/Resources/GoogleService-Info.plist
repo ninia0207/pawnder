@@ -30,5 +30,9 @@
 	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:682087933933:ios:47eb867044f278210c69e4</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Blinker-SemiBold.ttf</string>
+	</array>
 </dict>
 </plist>

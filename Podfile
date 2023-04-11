@@ -17,6 +17,7 @@ pod 'FirebaseAuth'
 pod 'FirebaseCrashlytics'
 pod 'FirebaseDatabase'
 pod 'FirebaseStorage'
+pod 'lottie-ios'
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|

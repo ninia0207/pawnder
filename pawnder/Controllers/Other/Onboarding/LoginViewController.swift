@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
         static let cornerRadius : CGFloat = 8.0
     }
     
+    
     //unanimous closure
     private let usernameEmailField : UITextField = {
         let field = UITextField()
@@ -133,13 +134,6 @@ class LoginViewController: UIViewController {
             height: view.height/3.0
         )
         
-//        footerView.frame = CGRect(
-//            x: 0,
-//            y: view.height-view.safeAreaInsets.bottom-50,
-//            width: view.width,
-//            height: view.height/3.0
-//        )
-        
         usernameEmailField.frame = CGRect(
             x: 25,
             y: headerView.bottom + 40,
@@ -200,9 +194,9 @@ class LoginViewController: UIViewController {
         headerView.addSubview(imageView)
         imageView.contentMode = .scaleAspectFit
         imageView.frame = CGRect(
-            x: headerView.width/4.0,
+            x: headerView.width/3.0,
             y: view.safeAreaInsets.top,
-            width: headerView.width/2.0,
+            width: headerView.width/3.0,
             height: headerView.height - view.safeAreaInsets.top
         )
         
