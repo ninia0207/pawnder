@@ -43,12 +43,25 @@ final class SettingsViewController: UIViewController {
     }
     
     private func configureModels(){
-        let section = [
-            SettingCellModel(title: "Log Out") {[weak self] in
-                self?.didTapLogOut()
+        data.append([
+            SettingCellModel(title: "Edit Profile") {[weak self] in
+            self?.didTapEditProfile()
             }
-        ]
-        data.append(section)
+        ])
+        
+        data.append([
+            SettingCellModel(title: "Log Out") {[weak self] in
+            self?.didTapLogOut()
+            }
+        ])
+    }
+    
+    private func didTapEditProfile(){
+        let vc = EditProfileViewController()
+        vc.title = "Edit Profile"
+        let navVC = UINavigationController(rootViewController: vc)
+        navVC.modalPresentationStyle = .fullScreen
+        present(navVC, animated: true)
     }
     
     private func didTapLogOut(){
@@ -93,6 +106,7 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = data[indexPath.section][indexPath.row].title
+        cell.accessoryType = .disclosureIndicator
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

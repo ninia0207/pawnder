@@ -11,5 +11,12 @@ public class StorageManager{
     
     static let shared = StorageManager()
     
+    private let bucket = Storage.storage().reference()
+    
     //MARK: - Public
+    
+    public func uploadUserPhotoPost(model: PhotoPost, completion: @escaping (Result<URL, Error>) -> Void){
+        
+    }
 }
+

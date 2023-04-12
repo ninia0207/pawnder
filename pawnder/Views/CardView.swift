@@ -16,7 +16,7 @@ struct CardView: View {
                 .frame(width: 320, height: 420)
                 .border(.white, width: 6.0)
                 .cornerRadius(4)
-                .foregroundColor(color.opacity(0.9))
+                .foregroundColor(Color(UIColor(red: 0.58, green: 0.74, blue: 0.58, alpha: 1.00)).opacity(0.9))
                 .shadow(radius: 4)
             HStack {
                 Text(pet)

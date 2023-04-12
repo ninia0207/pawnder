@@ -8,6 +8,7 @@ target 'pawnder' do
   # Pods for pawnder
 
 pod "Appirater"
+pod 'SDWebImage'
 
 #Firebase
 

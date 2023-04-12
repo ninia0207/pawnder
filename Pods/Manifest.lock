@@ -117,6 +117,9 @@ PODS:
   - PromisesObjC (2.2.0)
   - PromisesSwift (2.2.0):
     - PromisesObjC (= 2.2.0)
+  - SDWebImage (5.15.5):
+    - SDWebImage/Core (= 5.15.5)
+  - SDWebImage/Core (5.15.5)
 
 DEPENDENCIES:
   - Appirater
@@ -127,6 +130,7 @@ DEPENDENCIES:
   - FirebaseDatabase
   - FirebaseStorage
   - lottie-ios
+  - SDWebImage
 
 SPEC REPOS:
   trunk:
@@ -152,6 +156,7 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - PromisesSwift
+    - SDWebImage
 
 SPEC CHECKSUMS:
   Appirater: 44a4651f7912a17dc906b655f0c215d5bb768b84
@@ -176,7 +181,8 @@ SPEC CHECKSUMS:
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
   PromisesSwift: cf9eb58666a43bbe007302226e510b16c1e10959
+  SDWebImage: fd7e1a22f00303e058058278639bf6196ee431fe
 
-PODFILE CHECKSUM: 92f93df5f1e03fff446e9c6276d8893e966ef72d
+PODFILE CHECKSUM: 0b906a57ec133c9874695de5228c4acfb5ab3f07
 
 COCOAPODS: 1.12.0
